@@ -1,6 +1,6 @@
 package org.example.service;
 
-import org.example.entities.Company;
+import org.example.generics.entities.Company;
 
 
 import java.util.List;
