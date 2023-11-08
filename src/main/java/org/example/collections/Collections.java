@@ -56,5 +56,7 @@ public class Collections {
             System.out.println( charArray[charArray.length / 2]);
 
         }
+        char chars ="HOUSE".charAt(0);
+        System.out.println((int) chars);
     }
 }

@@ -1,5 +1,9 @@
 package org.example.mcDonalds;
 
+import org.example.Animal;
+import org.example.People;
+import org.example.User;
+import org.example.UserComparator;
 import org.example.mcDonalds.DTOs.CustomersDto;
 import org.example.mcDonalds.entities.Customer;
 import org.example.mcDonalds.entities.Food;
@@ -8,6 +12,7 @@ import org.example.mcDonalds.enums.MealPack;
 import org.example.mcDonalds.serviceImpl.DriveThruServiceImpl;
 
 import java.time.LocalDateTime;
+import java.util.PriorityQueue;
 
 public class AppInitialisation {
 
@@ -81,5 +86,22 @@ public class AppInitialisation {
 //        driveThruService.addCustomerToComparatorQueue(customerFour, customersDto4);
 //
 //        driveThruService.serveCustomersOrdersWithComparator();
+
+
+        System.out.println();
+        System.out.println();
+
+        User persons = new People();
+        persons.setAge(5);
+        User dog = new Animal();
+        dog.setAge(6);
+        PriorityQueue<User> queueOfUsers = new PriorityQueue<>(new UserComparator());
+        queueOfUsers.add(dog);
+        queueOfUsers.add(persons);
+
+
+        while(!queueOfUsers.isEmpty()){
+            System.out.println(queueOfUsers.poll());
+        }
     }
 }

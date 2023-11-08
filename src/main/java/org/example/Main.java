@@ -6,6 +6,7 @@ import org.example.generics.entities.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.PriorityQueue;
 
 public class Main {
     //TODO:I don't understand the lombok
@@ -31,5 +32,10 @@ public class Main {
         List<List<Object>> listOfString = new ArrayList<>();
         listOfString.add(List.of("1"));
         System.out.println("Hello world!");
+
+
+
+
+
     }
 }

@@ -13,6 +13,9 @@ import java.util.PriorityQueue;
 public class DriveThruServiceImpl implements DriveThruService<Customer, Food, CustomersDto>{
 
 
+    //private static fields for storing List of foods,
+    // List of customerDTO(as orderLeaflets) and
+    //customer priority Queue. Being "private static" will make these fields
     private static List<Food> listOfOrderedFoods = new ArrayList<>();
     private static List<CustomersDto> customersDTOs = new ArrayList<>();
     private static PriorityQueue<Customer> orderingQueue = new PriorityQueue<>();
