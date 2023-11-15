@@ -2,34 +2,30 @@ package org.example.serviceImp;
 
 import org.example.generics.entities.Company;
 import org.example.generics.entities.Person;
+import org.example.service.DefaultInterface;
 import org.example.service.DefaultService;
 
 import java.util.List;
 
-public class AdministrativeServiceImpl implements DefaultService<Company, Person> {
+public class AdministrativeServiceImpl{
 
-    @Override
-    public Company addNewData(Company company) {
-        return null;
-    }
 
-    @Override
-    public Company removeData(Company company) {
+    public DefaultInterface<Person, Person> addNewData = (person)->{
         return null;
-    }
+    };
 
-    @Override
-    public Person editData(Person person) {
+    public DefaultInterface<Person, Person> removeData = (person)->{
         return null;
-    }
+    };
 
-    @Override
-    public Company removeCompanyData(Company company) {
+    public DefaultInterface<Company, Company> editData = (company)->{
         return null;
-    }
+    };
 
-    @Override
-    public List<String> addStrings(String words) {
+    public DefaultInterface<Company, Company> removeCompanyData = (company)->{
         return null;
-    }
-}
+    };
+
+    public DefaultService addStrings = (stringsWords)-> {
+        return null;
+    };}

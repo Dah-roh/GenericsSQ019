@@ -9,6 +9,7 @@ import org.example.mcDonalds.entities.Customer;
 import org.example.mcDonalds.entities.Food;
 import org.example.mcDonalds.enums.Gender;
 import org.example.mcDonalds.enums.MealPack;
+import org.example.mcDonalds.exceptions.FoodScarcityException;
 import org.example.mcDonalds.serviceImpl.DriveThruServiceImpl;
 
 import java.time.LocalDateTime;
@@ -16,7 +17,7 @@ import java.util.PriorityQueue;
 
 public class AppInitialisation {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FoodScarcityException {
         Customer customer = Customer.builder().
                 customerId(1l)
                 .name("Vea")
@@ -73,19 +74,19 @@ public class AppInitialisation {
         driveThruService.addFood(caesarsSalad);
         driveThruService.addFood(parfait);
 
-        driveThruService.addCustomersToQueue(customer, customersDto);
-        driveThruService.addCustomersToQueue(customerTwo, customersDto2);
-        driveThruService.addCustomersToQueue(customerThree, customersDto3);
-        driveThruService.addCustomersToQueue(customerFour, customersDto4);
+        driveThruService.addCustomersToQueue.apply(customer, customersDto);
+        driveThruService.addCustomersToQueue.apply(customerTwo, customersDto2);
+        driveThruService.addCustomersToQueue.apply(customerThree, customersDto3);
+        driveThruService.addCustomersToQueue.apply(customerFour, customersDto4);
 
-        driveThruService.serveCustomersOrders();
+        driveThruService.serveCustomersOrders.serveFunction();
 
-//        driveThruService.addCustomerToComparatorQueue(customer, customersDto);
-//        driveThruService.addCustomerToComparatorQueue(customerTwo, customersDto2);
-//        driveThruService.addCustomerToComparatorQueue(customerThree, customersDto3);
-//        driveThruService.addCustomerToComparatorQueue(customerFour, customersDto4);
+        driveThruService.addCustomerToComparatorQueue.apply(customer, customersDto);
+        driveThruService.addCustomerToComparatorQueue.apply(customerTwo, customersDto2);
+        driveThruService.addCustomerToComparatorQueue.apply(customerThree, customersDto3);
+        driveThruService.addCustomerToComparatorQueue.apply(customerFour, customersDto4);
 //
-//        driveThruService.serveCustomersOrdersWithComparator();
+        driveThruService.serveCustomersOrdersWithComparator.serveFunction();
 
 
         System.out.println();
